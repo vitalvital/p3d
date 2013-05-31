@@ -16,8 +16,8 @@
          ed.addCommand('mceP3D', function() {
             ed.windowManager.open({
                file : ajaxurl + '?action=p3d_tinymce', 
-               width : 380 + ed.getLang('p3d.delta_width', 0),
-               height : 180 + ed.getLang('p3d.delta_height', 0),
+               width : 430 + ed.getLang('p3d.delta_width', 0),
+               height : 200 + ed.getLang('p3d.delta_height', 0),
                inline : 1
             }, {
                   plugin_url : url, // Plugin absolute URL

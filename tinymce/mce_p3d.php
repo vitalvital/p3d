@@ -15,47 +15,23 @@ global $wpdb;
 	<script language="javascript" type="text/javascript" src="<?php echo get_option('siteurl') ?>/wp-includes/js/tinymce/utils/mctabs.js"></script>
 	<script language="javascript" type="text/javascript" src="<?php echo get_option('siteurl') ?>/wp-includes/js/tinymce/utils/form_utils.js"></script>
 	<script language="javascript" type="text/javascript" src="<?php echo get_option('siteurl') ?>/wp-content/plugins/p3d/tinymce/p3d.js"></script>
-	<script language="javascript" type="text/javascript">
-		var old=false;
-	</script>
+
 	<base target="_self" />
 </head>
-<body id="link" onload="tinyMCEPopup.executeOnLoad('init();');document.body.style.display='';document.getElementById('p3d_tab').focus();" style="display: none">
-<!-- <form onsubmit="insertLink();return false;" action="#"> -->
+<body>
 	<form name="p3d" action="#">
-	<div class="tabs">
-		<ul>			
-			<li id="p3d_tab" class="current"><span><a href="javascript:mcTabs.displayTab('p3d_tab','p3d_panel');" onmousedown="return false;">3D Object</a></span></li>
-		</ul>
-	</div>
-	
-	<div class="panel_wrapper" style="height: 100px;">
-		<div id="p3d_panel" class="panel current">
-		<br />
-			<table border="0" cellpadding="3" cellspacing="0" width="100%">
-				<tr>
-					<td nowrap="nowrap" valign="top">
-						<label>Enter the URL of the 3D object from P3D.in</label>
-					</td>
-				</tr>
-				<tr>
-					<td  nowrap="nowrap" valign="top">
-						<input type="text" id="p3dlink" name="p3dlink" style="width: 100%" value="URL" onclick="if(!old) { this.value=''; old=true; }"/>
-					</td>
-				</tr>
-				<tr>
-					<td nowrap="nowrap" valign="top">
-						<label>It should look like this:
-							<ul>
-								<li>http://p3d.in/DtaO3/</li>
-							</ul>
-						</label>
-					</td>
-				</tr>
-			</table>
+		<div style="border-bottom: 1px solid #DFDFDF; padding: 0 0 10px 0; margin: 0 0 10px 0;">
+				<p style="font-style: italic;">Enter the URL of the 3D object from P3D.in</p>
+				<p>It should look like this:<br /><strong>http://p3d.in/e/N7XTv+load+shading,subd,-hidden</strong></p>
+				<div style="margin-bottom: 10px;">
+				<label><span>P3D URL</span><input style="border-radius: 4px; padding: 3px; margin: 0 5px; width: 80%;" type="text" name="p3dlink" id="p3dlink" value="" ></label>
+			</div>
+			<div style="margin-bottom: 10px;">
+				<label><span>Width (default - 100%)</span><input style="border-radius: 4px; padding: 3px; margin: 0 5px; width: 50px;" type="text" name="p3dwidth" id="p3dwidth" value="" ></label>
+				<label><span>Height (default - 500px)</span><input style="border-radius: 4px; padding: 3px; margin: 0 5px;  width: 50px;" type="text" name="p3dheight" id="p3dheight" value="" ></label>
+			</div>
 		</div>
-	</div>
-
+		
 	<div class="mceActionPanel">
 		<div style="float: left">
 			<input type="button" id="cancel" name="cancel" value="Cancel" onclick="tinyMCEPopup.close();" />
